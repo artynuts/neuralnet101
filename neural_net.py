@@ -22,6 +22,16 @@ bias_hidden = numpy.zeros((1,4))
 weights_hidden_output = numpy.random.randn(4,1)
 bias_output = numpy.zeros((1,1))
 
+def sigmoid(x):
+    return 1 / (1 + numpy.exp(-x))
+
+def forward(X):
+    hidden = sigmoid(numpy.dot(X, weights_input_hidden) + bias_hidden)
+    output = sigmoid(numpy.dot(hidden, weights_hidden_output) + bias_output)
+    return hidden, output
+
+hidden, output = forward(X)
+
 print("Training data (X):")
 print(X)
 
@@ -40,7 +50,9 @@ print(weights_hidden_output)
 print("\nInitial biases for output layer:")
 print(bias_output)
 
+print("\nOutput from the hidden layer before training:")
+print(hidden)
 
-
-
+print("\nOutput from the network before training:")
+print(output)
 
