@@ -89,7 +89,7 @@ The untrained network predicts ~0.3-0.4 for everything - it hasn't learned XOR y
 
 ## Training Progress
 
-Loss decreases as the network learns over 10,000 epochs:
+Loss decreases as the network learns over 20,000 epochs:
 
 ```
 Epoch 0, Loss: 0.28318958906443975
@@ -102,6 +102,8 @@ Epoch 6000, Loss: 0.00041496642844131835
 Epoch 7000, Loss: 0.000332466174610648
 Epoch 8000, Loss: 0.0002758369778643973
 Epoch 9000, Loss: 0.0002347927456259759
+  ...
+Epoch 19000, Loss: 0.0000842
 ```
 
 ## After Training
@@ -148,19 +150,19 @@ Epoch 9000, Loss: 0.0002347927456259759
 ### Network Predictions (4×1)
 
 ```
-[[0.01005386]
- [0.98713457]
- [0.98430741]
- [0.0173886 ]]
+[[0.00644862]
+ [0.99180292]
+ [0.9898358 ]
+ [0.0111749 ]]
 ```
 
 | Input | Expected | Predicted (trained) |
 |-------|----------|---------------------|
-| [0,0] | 0        | 0.01                |
-| [0,1] | 1        | 0.99                |
-| [1,0] | 1        | 0.98                |
-| [1,1] | 0        | 0.02                |
+| [0,0] | 0        | 0.006               |
+| [0,1] | 1        | 0.992               |
+| [1,0] | 1        | 0.990               |
+| [1,1] | 0        | 0.011               |
 
-**Final Loss:** 0.000204
+**Final Loss:** 0.0000842
 
 The network successfully learned XOR!

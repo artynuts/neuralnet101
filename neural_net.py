@@ -85,7 +85,7 @@ print("\nInitial loss before training:")
 print(calculate_loss(Y, output))
 
 # Training loop
-for epoch in range(10000):
+for epoch in range(20000):
     hidden, output = forward(X)
     backward(X, Y, hidden, output)
 
